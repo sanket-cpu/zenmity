@@ -1,10 +1,8 @@
 import "package:flutter/material.dart";
 import 'firstyearsubjects/subjects.dart';
-import 'package:flutter_downloader/flutter_downloader.dart';
 import 'package:firebase_core/firebase_core.dart';
 import "package:firebase_messaging/firebase_messaging.dart";
 import 'misc.dart';
-import 'auth/signUI.dart';
 import 'package:flutter_email_sender/flutter_email_sender.dart';
 
 void main() async {

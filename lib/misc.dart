@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import './linking/linking.dart';
 import './linking/api.dart';
 import 'package:flutter/material.dart';

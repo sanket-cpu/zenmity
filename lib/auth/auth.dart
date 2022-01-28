@@ -10,7 +10,7 @@ Future<bool> signin(String email, String password) async {
         msg: "Sign in Successful!", toastLength: Toast.LENGTH_LONG);
 
     return true;
-  } on FirebaseAuthException catch (e) {
+  } on FirebaseAuthException {
     Fluttertoast.showToast(
         msg: "Sign in Unsuccessful", toastLength: Toast.LENGTH_LONG);
     return false;

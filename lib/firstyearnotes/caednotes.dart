@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:auselessthing/linking/linking.dart';
 import 'package:auselessthing/linking/api.dart';
 import 'package:flutter/material.dart';

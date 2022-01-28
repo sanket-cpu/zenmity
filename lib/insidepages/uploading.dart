@@ -2,7 +2,6 @@ import 'package:auselessthing/linking/api.dart';
 import 'package:flutter/material.dart';
 import 'dart:io';
 import 'package:path/path.dart';
-import 'package:open_file/open_file.dart';
 import "package:file_picker/file_picker.dart";
 
 class UploadState extends StatefulWidget {
