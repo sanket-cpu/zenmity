@@ -1,4 +1,4 @@
-import 'package:auselessthing/notes/math.dart';
+import 'package:auselessthing/firstyearnotes/math.dart';
 import 'package:flutter/material.dart';
 
 final _randlist = ["Study Material and Resources"];

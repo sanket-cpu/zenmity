@@ -1,5 +1,5 @@
 import "package:flutter/material.dart";
-import "subjects.dart";
+import 'firstyearsubjects/subjects.dart';
 import 'package:flutter_downloader/flutter_downloader.dart';
 import 'package:firebase_core/firebase_core.dart';
 import "package:firebase_messaging/firebase_messaging.dart";

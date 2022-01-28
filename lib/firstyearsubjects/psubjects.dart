@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'notes/caednotes.dart';
+import '../firstyearnotes/caednotes.dart';
 
 final randlist = ["Study Material and other Resources"];
 

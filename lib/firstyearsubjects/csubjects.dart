@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'notes/caednotes.dart';
+import 'package:auselessthing/firstyearnotes/caednotes.dart';
 
 final chemlist = [
   "CIP",
