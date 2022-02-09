@@ -1,7 +1,6 @@
-import 'psubjects.dart';
+import 'package:auselessthing/firstyearnotes/math.dart';
 import 'package:flutter/material.dart';
-import 'csubjects.dart';
-import 'commonsub.dart';
+import 'package:auselessthing/firstyearnotes/caednotes.dart';
 
 var sub;
 final phylist = [
@@ -30,80 +29,92 @@ class PhyCycle extends StatefulWidget {
 
 class JustARandomThing extends State<PhyCycle> {
   Widget build(BuildContext context) {
-    return Container(
-        child: Column(
-      children: [
-        for (sub in phylist)
-          if (sub == 'Engineering Physics')
-            SizedBox(
-                width: 350,
-                child: ElevatedButton(
-                  child: Text('Engineering Physics'),
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => PhyState()));
-                  },
-                ))
-          else if (sub == "Engineering Mathematics-II")
-            SizedBox(
-                width: 350,
-                child: ElevatedButton(
-                  child: Text("Engineering Mathematics-II"),
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => MathState()));
-                  },
-                ))
-          else if (sub == "Concepts in C Programming-II")
-            SizedBox(
-                width: 350,
-                child: ElevatedButton(
-                  child: Text("Concepts in C Programming-II"),
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => CCPState()));
-                  },
-                ))
-          else if (sub == "Elements of Mechanical Engineering")
-            SizedBox(
-                width: 350,
-                child: ElevatedButton(
-                  child: Text("Elements of Mechanical Engineering"),
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => EMEState()));
-                  },
-                ))
-          else if (sub == "Basic Electrical Engineering ")
-            SizedBox(
-                width: 350,
-                child: ElevatedButton(
-                    child: Text("Basic Electrical Engineering "),
+    return Scaffold(
+      backgroundColor: Colors.black,
+      appBar: AppBar(
+        title: Text("Physics Cycle"),
+        centerTitle: true,
+        backgroundColor: Colors.black,
+      ),
+      body: Container(
+          child: Column(
+        children: [
+          for (sub in phylist)
+            if (sub == 'Engineering Physics')
+              SizedBox(
+                  width: 350,
+                  child: ElevatedButton(
+                    child: Text('Engineering Physics'),
                     onPressed: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => BEEState()));
-                    }))
-          else if (sub == 'Environmental Studies')
-            SizedBox(
-                width: 350,
-                child: ElevatedButton(
-                  child: Text('Environmental Studies'),
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => EVSState()));
-                  },
-                ))
-          else if (sub == "English")
-            SizedBox(
-                width: 350,
-                child: ElevatedButton(
-                    child: Text("English"),
+                          MaterialPageRoute(builder: (context) => PhyNotes()));
+                    },
+                  ))
+            else if (sub == "Engineering Mathematics-II")
+              SizedBox(
+                  width: 350,
+                  child: ElevatedButton(
+                    child: Text("Engineering Mathematics-II"),
                     onPressed: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => EngState()));
-                    }))
-      ],
-    ));
+                          MaterialPageRoute(builder: (context) => MathNotes()));
+                    },
+                  ))
+            else if (sub == "Concepts in C Programming-II")
+              SizedBox(
+                  width: 350,
+                  child: ElevatedButton(
+                    child: Text("Concepts in C Programming-II"),
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => CCPNotes()));
+                    },
+                  ))
+            else if (sub == "Elements of Mechanical Engineering")
+              SizedBox(
+                  width: 350,
+                  child: ElevatedButton(
+                    child: Text("Elements of Mechanical Engineering"),
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => EMENotes()));
+                    },
+                  ))
+            else if (sub == "Basic Electrical Engineering ")
+              SizedBox(
+                  width: 350,
+                  child: ElevatedButton(
+                      child: Text("Basic Electrical Engineering "),
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => BEENotes()));
+                      }))
+            else if (sub == 'Environmental Studies')
+              SizedBox(
+                  width: 350,
+                  child: ElevatedButton(
+                    child: Text('Environmental Studies'),
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => EVSNotes()));
+                    },
+                  ))
+            else if (sub == "English")
+              SizedBox(
+                  width: 350,
+                  child: ElevatedButton(
+                      child: Text("English"),
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => EngNotes()));
+                      }))
+        ],
+      )),
+    );
   }
 }
 
@@ -114,79 +125,113 @@ class ChemCycle extends StatefulWidget {
 
 class ChemSub extends State<ChemCycle> {
   Widget build(BuildContext context) {
-    return Container(
-        child: Column(
-      children: [
-        for (sub in chemlist)
-          if (sub == 'Engineering Chemistry')
-            SizedBox(
-                width: 350,
-                child: ElevatedButton(
-                  child: Text('Engineering Chemistry'),
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => ChemState()));
-                  },
-                ))
-          else if (sub == "Engineering Mathematics-II")
-            SizedBox(
-                width: 350,
-                child: ElevatedButton(
-                  child: Text("Engineering Mathematics-II"),
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => MathState()));
-                  },
-                ))
-          else if (sub == "Concepts in C Programming-II")
-            SizedBox(
-                width: 350,
-                child: ElevatedButton(
-                  child: Text("Concepts in C Programming-II"),
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => CCPState()));
-                  },
-                ))
-          else if (sub == "Engineering Mechanics")
-            SizedBox(
-                width: 350,
-                child: ElevatedButton(
-                  child: Text("Engineering Mechanics"),
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => MEState()));
-                  },
-                ))
-          else if (sub == "Basic Electronics")
-            SizedBox(
-                width: 350,
-                child: ElevatedButton(
-                    child: Text("Basic Electronics"),
-                    onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => BEState()));
-                    }))
-          else if (sub == "CIP")
-            SizedBox(
-                width: 350,
-                child: ElevatedButton(
-                  child: Text("CIP"),
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => CIPState()));
-                  },
-                ))
-          else if (sub == "CAED")
-            SizedBox(
-                width: 350,
-                child: ElevatedButton(
-                    child: Text("CAED"),
-                    onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => CAEDState()));
-                    }))
-      ],
-    ));
+    return Scaffold(
+      backgroundColor: Colors.black,
+      appBar: AppBar(
+        centerTitle: true,
+        backgroundColor: Colors.black,
+        title: Text("Chemistry Cycle"),
+      ),
+      body: Container(
+          child: Column(
+        children: [
+          for (sub in chemlist)
+            if (sub == 'Engineering Chemistry')
+              Center(
+                child: SizedBox(
+                    width: 350,
+                    child: ElevatedButton(
+                      child: Text('Engineering Chemistry'),
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => ChemNotes()));
+                      },
+                    )),
+              )
+            else if (sub == "Engineering Mathematics-II")
+              Center(
+                child: SizedBox(
+                    width: 350,
+                    child: ElevatedButton(
+                      child: Text("Engineering Mathematics-II"),
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => MathNotes()));
+                      },
+                    )),
+              )
+            else if (sub == "Concepts in C Programming-II")
+              Center(
+                child: SizedBox(
+                    width: 350,
+                    child: ElevatedButton(
+                      child: Text("Concepts in C Programming-II"),
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => CCPNotes()));
+                      },
+                    )),
+              )
+            else if (sub == "Engineering Mechanics")
+              Center(
+                child: SizedBox(
+                    width: 350,
+                    child: ElevatedButton(
+                      child: Text("Engineering Mechanics"),
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => EMNotes()));
+                      },
+                    )),
+              )
+            else if (sub == "Basic Electronics")
+              Center(
+                child: SizedBox(
+                    width: 350,
+                    child: ElevatedButton(
+                        child: Text("Basic Electronics"),
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => BENotes()));
+                        })),
+              )
+            else if (sub == "CIP")
+              Center(
+                child: SizedBox(
+                    width: 350,
+                    child: ElevatedButton(
+                      child: Text("CIP"),
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => CIPNotes()));
+                      },
+                    )),
+              )
+            else if (sub == "CAED")
+              Center(
+                child: SizedBox(
+                    width: 350,
+                    child: ElevatedButton(
+                        child: Text("CAED"),
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => CAEDNotes()));
+                        })),
+              )
+        ],
+      )),
+    );
   }
 }

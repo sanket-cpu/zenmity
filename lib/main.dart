@@ -4,6 +4,7 @@ import 'package:firebase_core/firebase_core.dart';
 import "package:firebase_messaging/firebase_messaging.dart";
 import 'misc.dart';
 import 'package:flutter_email_sender/flutter_email_sender.dart';
+import 'firstyearnotes/cyclelayout.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -31,37 +32,37 @@ class SampleExtend extends State<SampleApp> {
         length: tabs.length,
         child: SafeArea(
           child: Scaffold(
-            drawer: Drawer(
-                child: ListView(
-              children: [
-                DrawerHeader(
-                    child:
-                        Text("ZeNMITy", style: TextStyle(color: Colors.white)),
-                    decoration: BoxDecoration(
-                        color: Colors.black,
-                        image: DecorationImage(
-                            image: AssetImage("assets/ic_launcher.png"),
-                            fit: BoxFit.fitHeight))),
-                ListTile(
-                  leading: Icon(
-                    Icons.info,
-                    color: Colors.blue,
+              drawer: Drawer(
+                  child: ListView(
+                children: [
+                  DrawerHeader(
+                      child: Text("ZeNMITy",
+                          style: TextStyle(color: Colors.white)),
+                      decoration: BoxDecoration(
+                          color: Colors.black,
+                          image: DecorationImage(
+                              image: AssetImage("assets/ic_launcher.png"),
+                              fit: BoxFit.fitHeight))),
+                  ListTile(
+                    leading: Icon(
+                      Icons.info,
+                      color: Colors.blue,
+                    ),
+                    title: Text(
+                      "About ZeNMITy",
+                    ),
+                    onTap: licenses,
                   ),
-                  title: Text(
-                    "About ZeNMITy",
+                  ListTile(
+                    onTap: emailfunc,
+                    leading: Icon(
+                      Icons.mail,
+                      color: Colors.blue,
+                    ),
+                    title: Text("Developer Contact"),
+                    enabled: true,
                   ),
-                  onTap: licenses,
-                ),
-                ListTile(
-                  onTap: emailfunc,
-                  leading: Icon(
-                    Icons.mail,
-                    color: Colors.blue,
-                  ),
-                  title: Text("Developer Contact"),
-                  enabled: true,
-                ),
-                /* ListTile(
+                  /* ListTile(
                   onTap: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => SignInState()));
@@ -73,21 +74,40 @@ class SampleExtend extends State<SampleApp> {
                   title: Text("ZeNMITy Account"),
                   enabled: true,
                 ),*/
-              ],
-            )),
-            backgroundColor: Colors.black12,
-            appBar: AppBar(
-              centerTitle: true,
-              backgroundColor: Colors.black,
-              bottom: TabBar(
+                ],
+              )),
+              backgroundColor: Colors.black12,
+              appBar: AppBar(
+                centerTitle: true,
+                backgroundColor: Colors.black,
+                /*bottom: TabBar(
                 tabs: [
                   for (final tab in tabs) Text(tab.toString()),
                 ],
                 isScrollable: true,
+              ),*/
+                title: Text("ZeNMITy"),
               ),
-              title: Text("ZeNMITy"),
-            ),
-            body: TabBarView(children: [
+              body: Container(
+                child: Column(
+                  children: [
+                    Center(
+                      child: SizedBox(
+                        width: 350,
+                        child: ElevatedButton(
+                          child: Text('First Year Notes'),
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Cycles()));
+                          },
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ) /*TabBarView(children: [
               for (final tab1 in tabs)
                 if (tab1.toString() == "Physics Cycle")
                   Center(
@@ -101,8 +121,8 @@ class SampleExtend extends State<SampleApp> {
                   Center(
                     child: Misc(),
                   )
-            ]),
-          ),
+            ]),*/
+              ),
         ),
       ),
     );
