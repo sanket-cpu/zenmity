@@ -1,10 +1,12 @@
-# auselessthing
+# ZeNMITy
 
-A new Flutter project.
+An Android application built using Flutter.
 
-## Getting Started
+## About the App
 
-This project is a starting point for a Flutter application.
+This project contains pdf handouts of various subjects at NMIT , Bangalore. It is built using the Firebase Database, that enables users to update notes in real-time.
+
+## How - To
 
 A few resources to get you started if this is your first Flutter project:
 
